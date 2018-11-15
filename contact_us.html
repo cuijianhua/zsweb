@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>安阳卷烟厂制丝部</title>
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+    	<link href="css/site.css" rel="stylesheet">
+	    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <style>
+		    .foot-property{
+		        color: #fffffa;
+		    }
+		    .navbar-header{
+		        padding-right: 0px;
+		    }
+		    .navbar-default .navbar-nav > li > a {
+		        padding-left: 18px;
+		        padding-right: 18px;
+		    }
+		    .top > .up {
+            background: url(img/homepage_bg_up.png) center;
+        	}
+
+	        .top > .down {
+	            background: url(img/homepage_bg_down.png) center;
+	        }
+
+		    a{
+		        text-decoration: none;
+		    }
+		    .content-property {
+		            margin-top: 40px;
+		            line-height: 23px;
+		            margin-bottom: 250px;
+		
+		        }
+
+	        .header-property {
+	            height: 290px;
+	            margin: 0 auto;
+	            color: #ffffff;
+	            background: url("img/zhuoyue.jpg") repeat center;
+	            background-size: cover;
+	        }
+	
+	        .contact_us_property {
+	            margin-left: 110px;
+	            margin-top: -60px;
+	        }
+	
+	        .title-property {
+	            padding-bottom: 20px;
+	            border-bottom: 1px solid #f39f02;
+	            padding-left: 0px;
+	            margin-left: 0px;
+	        }
+	
+	        .address-property {
+	            margin-left: 7px;
+	            font-size: 20px;
+	        }
+	
+	        .content-items {
+	            padding-right: 0px;
+	            padding-left: 0px;
+	        }
+	        .row{
+	            margin-left: 0px;
+	        }
+		</style>
+	</head>
+	<body>
+	<nav class="navbar navbar-default " id="top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" id="logo" href="home.html"><img src="img/helezhisi.png"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li class="{% active 'home exact' %}"><a href="home.html">首页<span
+                        class="sr-only">(current)</span></a></li>
+                <li class="{% active 'leaders:index' %}"><a href="workshop_team.html">车间队伍</a></li>
+                <li class="{% active 'startups:project_list' %}"><a href="research_project.html">研究项目</a>
+                </li>
+                <li class="{% active 'events:activity_list' %}"><a href="innovation_product.html">创新成果</a></li>
+                <li class="active"><a href="skill_video.html">技术视频</a></li>
+                <li class="{% active 'events:activity_list' %}"><a href="material_center.html">资料中心</a></li>
+                <li class="{% active 'events:activity_list' %}"><a href="message_board.html">留言板</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="logout-dialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">{% trans 'Log out' %}</h4>
+            </div>
+            <div class="modal-body">
+                {% trans 'Are you sure you want to log out?' %}
+            </div>
+            <div class="modal-footer">
+                <a href="{% url 'logout' %}" role="button" class="btn btn-danger">{% trans 'Yes' %}</a>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">{% trans 'No' %}</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="header-property"></div><img class="contact_us_property" src="img/contact_us.png">
+    <div class="container content-property">
+        <div class="col-md-6">
+            <div class="title-property">
+                <div class="row">
+                    <div class="col-md-3 content-items">
+                        <img src="img/location.png">&nbsp;<span
+                            class="address-property">&nbsp;&nbsp;&nbsp;地址:</span></div>
+                    <div class="col-md-7">
+                        <div style="margin-top: 4px; margin-left: -30px;">河南省安阳市龙安区烟厂路南段安阳卷烟厂</div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row" style="margin-top: 5px;">
+                    <div class="col-md-3 content-items"><img src="img/phone_icon.png"><span
+                            class="address-property">&nbsp;&nbsp;&nbsp;电话:</span></div>
+                    <div class="col-md-5" style="margin-top: 4px; margin-left: -30px;">0732-1234567 0732-43568777</div>
+                    <div class="col-md-3"></div>
+                </div>
+                <div class="row" style="margin-top: 8px;">
+                    <div class="col-md-3 content-items"><img src="img/email_icon.jpg"><span
+                            class="address-property">&nbsp;&nbsp;&nbsp;邮箱:</span></div>
+                    <div class="col-md-5" style="margin-top: 4px; margin-left: -30px;">ayjyc@126.com</div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+            <div class="content-property">
+                <p>帐号问题，网页使用或手机软件使用问题，请发电子邮件到 <a href="mailto:support@angelscity.co">support@ayjyc.com;</a></p>
+                <p>一般关于公司的问题，请发电子邮件到<a href="mailto:info@angelscity.co">info@ayjyczsb.com;</a></p>
+            </div>
+        </div>
+        <div class="col-md-6">
+        	<iframe src="map.html" frameborder="0" scrolling="no" width="550px" height="500px"></iframe>
+        	<!--<img class="corporate-property" src="img/corporate.png">-->
+        </div>
+    </div>
+
+
+<footer>
+    <div class="container">
+        <ul class="footer-links">
+            <li ><a href="about_us.html" class="foot-property">关于我们</a></li>
+            <li>|</li>
+            <li><a href="contact_us.html" class="foot-property">联系我们</a></li>
+            <!--<li>|</li>-->
+            <!--<li><a href="#" class="foot-property">获取帮助</a></li>-->
+        </ul>
+        <p class="foot-property">版权所有：安阳卷烟厂制丝部，未经许可，本网站包括图像、图标、文字在内的所有数据不得转载</p>
+    </div>
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as n
+eeded -->
+<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
+

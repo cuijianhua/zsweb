@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>安阳卷烟厂制丝部</title>
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+    	<link href="css/site.css" rel="stylesheet">
+	    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <style>
+		    .foot-property{
+		        color: #fffffa;
+		    }
+		    .navbar-header{
+		        padding-right: 0px;
+		    }
+		    .navbar-default .navbar-nav > li > a {
+		        padding-left: 18px;
+		        padding-right: 18px;
+		    }
+		    .news-property {
+            margin-top: 40px;
+            background-color: #ffffff;
+            padding-bottom: 500px;
+            margin-bottom: 150px;
+        	}
+
+	        body {
+	            background-color: #f1f1f1;
+	        }
+	
+	        .news-title-property {
+	            margin-top: 10px;
+	            margin-bottom: 25px;
+	            font-size: 30px;
+	            color: #3e3e3e;
+	            border-bottom: 1px solid #cccccc;
+	            padding: 20px 0 10px 0;
+	        }
+	        .news-content-property {
+	            margin-top: 30px;
+	        }
+	        .news-content-property p {
+	        	margin-left: 50px;
+	        }
+		</style>
+	</head>
+	<body>
+	<nav class="navbar navbar-default " id="top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" id="logo" href="home.html"><img src="img/helezhisi.png"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li class="{% active 'home exact' %}"><a href="home.html">首页<span
+                        class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="workshop_team.html">车间队伍</a></li>
+                <li class="active"><a href="research_project.html">研究项目</a>
+                </li>
+                <li class="active"><a href="innovation_product.html">创新成果</a></li>
+                <li class="active"><a href="skill_video.html">技术视频</a></li>
+                <li ><a href="material_center.html">资料中心</a></li>
+                <li class="active"><a href="message_board.html">留言板</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="logout-dialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">{% trans 'Log out' %}</h4>
+            </div>
+            <div class="modal-body">
+                {% trans 'Are you sure you want to log out?' %}
+            </div>
+            <div class="modal-footer">
+                <a href="{% url 'logout' %}" role="button" class="btn btn-danger">{% trans 'Yes' %}</a>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">{% trans 'No' %}</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container news-property">
+    <h1 class="news-title-property text-center">AutoCAD中各种命令</h1>
+    <div class="title-item text-center">
+        <!--{{ new.time.year }}-{{ new.time.month }}-{{ new.time.day }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+    </div>
+    <!--<div class="top-center-image">
+        <img src="img/hongsiji.jpg">
+    </div>-->
+    <div class="news-content-property">
+       <p>REN, *RENAME（重命名）</p>
+       <p>SN, *SNAP（捕捉栅格） DS, *DSETTINGS（设置极轴追踪）</p>
+       <p>OS, *OSNAP（设置捕捉模式） PRE, *PREVIEW（打印预览）</p>
+       <p>TO, *TOOLBAR（工具栏） V, *VIEW（命名视图）</p>
+       <p>AA, *AREA（面积） DI, *DIST（距离）</p>
+       <p>LI, *LIST（显示图形数据信息）</p>
+       <p>PO, *POINT（点） L, *LINE（直线）</p>
+       <p>XL, *XLINE（射线） PL, *PLINE（多段线）</p>
+       <p>ML, *MLINE（多线） SPL, *SPLINE（样条曲线）</p>
+       <p>POL, *POLYGON（正多边形） REC, *RECTANGLE（矩形）</p>
+       <p>DO, *DONUT（圆环）       EL, *ELLIPSE（椭圆）</p>
+       <p>REG, *REGION（面域） MT, *MTEXT（多行文本）</p>
+    </div>
+    </div>
+
+
+<footer>
+    <div class="container">
+        <ul class="footer-links">
+            <li ><a href="about_us.html" class="foot-property">关于我们</a></li>
+            <li>|</li>
+            <li><a href="contact_us.html" class="foot-property">联系我们</a></li>
+            <!--<li>|</li>-->
+            <!--<li><a href="#" class="foot-property">获取帮助</a></li>-->
+        </ul>
+        <p class="foot-property">版权所有：安阳卷烟厂制丝部，未经许可，本网站包括图像、图标、文字在内的所有数据不得转载</p>
+    </div>
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as n
+eeded -->
+<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
+

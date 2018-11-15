@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>安阳卷烟厂制丝部</title>
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+    	<link href="css/site.css" rel="stylesheet">
+	    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <style>
+		    .foot-property{
+		        color: #fffffa;
+		    }
+		    .navbar-header{
+		        padding-right: 0px;
+		    }
+		    .navbar-default .navbar-nav > li > a {
+		        padding-left: 18px;
+		        padding-right: 18px;
+		    }
+		     body {
+            background-color: #f1f1f1;
+	        }
+	
+	        #content > .container {
+	            background-color: #ffffff;
+	            margin-top: 20px;
+	        }
+	
+	        .pagination {
+	            margin: 50px 0 60px 0;
+	            padding: 0 15px;
+	            text-align: right;
+	        }
+		</style>
+	</head>
+	<body>
+	<nav class="navbar navbar-default " id="top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" id="logo" href="home.html"><img src="img/helezhisi.png"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="home.html">首页<span
+                        class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="workshop_team.html">车间队伍</a></li>
+                <li class="active"><a href="research_project.html">研究项目</a>
+                </li>
+                <li class="active"><a href="innovation_product.html">创新成果</a></li>
+                <li ><a href="skill_video.html">技术视频</a></li>
+                <li class="active"><a href="material_center.html">资料中心</a></li>
+                <li class="active"><a href="message_board.html">留言板</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="logout-dialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">{% trans 'Log out' %}</h4>
+            </div>
+            <div class="modal-body">
+                {% trans 'Are you sure you want to log out?' %}
+            </div>
+            <div class="modal-footer">
+                <a href="{% url 'logout' %}" role="button" class="btn btn-danger">{% trans 'Yes' %}</a>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">{% trans 'No' %}</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+ <div class="container" style="margin-top: 20px; margin-left: 89.5px; margin-right: 89.5px; background: white;">
+        <div class="row content-title"><h1>技&nbsp;术&nbsp;视&nbsp;频</h1></div>
+
+        <div class="row">
+            <div class="col-md-4">
+            	<div class="project-item" style="padding-left: 3px;">
+	                        	<video width="350" height="250" controls="controls">
+	                        		<source src="img/1.mp4" type="audio/mp4"></source>
+	                        	</video>
+	                    <div class="media-body content-style">
+	                        <h4 class="event-title">薄板烘丝机旋转接头使用教程</h4>
+	                        <span>地点:河南安阳卷烟厂</span><br>
+	                        <span>时间：四月 13，2017，8：30am</span><br>
+	                        <span class="meeting-content">介绍:踢足球, 打麻酱</span>
+	                    </div>
+	            </div>
+    		</div>
+    		<div class="col-md-4">
+            	<div class="project-item" style="padding-left: 3px;">
+	                        	<video width="350" height="250" controls="controls">
+	                        		<source src="img/1.mp4" type="audio/mp4"></source>
+	                        	</video>
+	                    <div class="media-body content-style">
+	                        <h4 class="event-title">薄板烘丝机旋转接头使用教程</h4>
+	                        <span>地点:河南安阳卷烟厂</span><br>
+	                        <span>时间：四月 13，2017，8：30am</span><br>
+	                        <span class="meeting-content">介绍:踢足球, 打麻酱</span>
+	                    </div>
+	            </div>
+    		</div>
+    		<div class="col-md-4">
+            	<div class="project-item" style="padding-left: 3px;">
+	                        	<video width="350" height="250" controls="controls">
+	                        		<source src="img/1.mp4" type="audio/mp4"></source>
+	                        	</video>
+	                    <div class="media-body content-style">
+	                        <h4 class="event-title">薄板烘丝机旋转接头使用教程</h4>
+	                        <span>地点:河南安阳卷烟厂</span><br>
+	                        <span>时间：四月 13，2017，8：30am</span><br>
+	                        <span class="meeting-content">介绍:踢足球, 打麻酱</span>
+	                    </div>
+	            </div>
+    		</div>
+    		<div class="col-md-4">
+            	<div class="project-item" style="padding-left: 3px;">
+	                        	<video width="350" height="250" controls="controls">
+	                        		<source src="img/1.mp4" type="audio/mp4"></source>
+	                        	</video>
+	                    <div class="media-body content-style">
+	                        <h4 class="event-title">薄板烘丝机旋转接头使用教程</h4>
+	                        <span>地点:河南安阳卷烟厂</span><br>
+	                        <span>时间：四月 13，2017，8：30am</span><br>
+	                        <span class="meeting-content">介绍:踢足球, 打麻酱</span>
+	                    </div>
+	            </div>
+    		</div>
+    		<div class="col-md-4">
+            	<div class="project-item" style="padding-left: 3px;">
+	                        	<video width="350" height="250" controls="controls">
+	                        		<source src="img/1.mp4" type="audio/mp4"></source>
+	                        	</video>
+	                    <div class="media-body content-style">
+	                        <h4 class="event-title">薄板烘丝机旋转接头使用教程</h4>
+	                        <span>地点:河南安阳卷烟厂</span><br>
+	                        <span>时间：四月 13，2017，8：30am</span><br>
+	                        <span class="meeting-content">介绍:踢足球, 打麻酱</span>
+	                    </div>
+	            </div>
+    		</div>
+    		<div class="col-md-4">
+            	<div class="project-item" style="padding-left: 3px;">
+	                        	<video width="350" height="250" controls="controls">
+	                        		<source src="img/1.mp4" type="audio/mp4"></source>
+	                        	</video>
+	                    <div class="media-body content-style">
+	                        <h4 class="event-title">薄板烘丝机旋转接头使用教程</h4>
+	                        <span>地点:河南安阳卷烟厂</span><br>
+	                        <span>时间：四月 13，2017，8：30am</span><br>
+	                        <span class="meeting-content">介绍:踢足球, 打麻酱</span>
+	                    </div>
+	            </div>
+    		</div>
+    		<div class="col-md-4">
+            	<div class="project-item" style="padding-left: 3px;">
+	                        	<video width="350" height="250" controls="controls">
+	                        		<source src="img/1.mp4" type="audio/mp4"></source>
+	                        	</video>
+	                    <div class="media-body content-style">
+	                        <h4 class="event-title">薄板烘丝机旋转接头使用教程</h4>
+	                        <span>地点:河南安阳卷烟厂</span><br>
+	                        <span>时间：四月 13，2017，8：30am</span><br>
+	                        <span class="meeting-content">介绍:踢足球, 打麻酱</span>
+	                    </div>
+	            </div>
+    		</div>
+    		<div class="col-md-4">
+            	<div class="project-item" style="padding-left: 3px;">
+	                        	<video width="350" height="250" controls="controls">
+	                        		<source src="img/1.mp4" type="audio/mp4"></source>
+	                        	</video>
+	                    <div class="media-body content-style">
+	                        <h4 class="event-title">薄板烘丝机旋转接头使用教程</h4>
+	                        <span>地点:河南安阳卷烟厂</span><br>
+	                        <span>时间：四月 13，2017，8：30am</span><br>
+	                        <span class="meeting-content">介绍:踢足球, 打麻酱</span>
+	                    </div>
+	            </div>
+    		</div>
+    		<div class="col-md-4">
+            	<div class="project-item" style="padding-left: 3px;">
+	                        	<video width="350" height="250" controls="controls">
+	                        		<source src="img/1.mp4" type="audio/mp4"></source>
+	                        	</video>
+	                    <div class="media-body content-style">
+	                        <h4 class="event-title">薄板烘丝机旋转接头使用教程</h4>
+	                        <span>地点:河南安阳卷烟厂</span><br>
+	                        <span>时间：四月 13，2017，8：30am</span><br>
+	                        <span class="meeting-content">介绍:踢足球, 打麻酱</span>
+	                    </div>
+	            </div>
+    		</div>
+    		<div class="col-md-4">
+            	<div class="project-item" style="padding-left: 3px;">
+	                        	<video width="350" height="250" controls="controls">
+	                        		<source src="img/1.mp4" type="audio/mp4"></source>
+	                        	</video>
+	                    <div class="media-body content-style">
+	                        <h4 class="event-title">薄板烘丝机旋转接头使用教程</h4>
+	                        <span>地点:河南安阳卷烟厂</span><br>
+	                        <span>时间：四月 13，2017，8：30am</span><br>
+	                        <span class="meeting-content">介绍:踢足球, 打麻酱</span>
+	                    </div>
+	            </div>
+    		</div>
+        </div>
+
+        <ul class="pagination pull-right">
+            <!--{% for i in items.paginator.page_range %}-->
+                <!--{% if i == items.number %}-->
+                    <li class="active"><a href="#">1</a></li>
+                    <li ><a href="#">2</a></li>
+                    <li ><a href="#">3</a></li>
+                    <li ><a href="#">4</a></li>
+                <!--{% else %}-->
+                    <!--<li><a href="?page={{ i }}">{{ i }}</a></li>-->
+                <!--{% endif %}-->
+            <!--{% endfor %}-->
+        </ul>
+    </div>
+
+
+
+
+
+<footer>
+    <div class="container">
+        <ul class="footer-links">
+            <li ><a href="about_us.html" class="foot-property">关于我们</a></li>
+            <li>|</li>
+            <li><a href="contact_us.html" class="foot-property">联系我们</a></li>
+            <!--<li>|</li>-->
+            <!--<li><a href="#" class="foot-property">获取帮助</a></li>-->
+        </ul>
+        <p class="foot-property">版权所有：安阳卷烟厂制丝部，未经许可，本网站包括图像、图标、文字在内的所有数据不得转载</p>
+    </div>
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as n
+eeded -->
+<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
+

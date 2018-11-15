@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>安阳卷烟厂制丝部</title>
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+    	<link href="css/site.css" rel="stylesheet">
+    	<link href="css/jquery.idcode.css" rel="stylesheet" type="text/css" />
+	    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <style>
+		    .foot-property{
+		        color: #fffffa;
+		    }
+		    .navbar-header{
+		        padding-right: 0px;
+		    }
+		    .navbar-default .navbar-nav > li > a {
+		        padding-left: 18px;
+		        padding-right: 18px;
+		    }
+		    .top > .up {
+            background: url(img/homepage_bg_up.png) center;
+        	}
+
+	        .top > .down {
+	            background: url(img/homepage_bg_down.png) center;
+	        }
+
+	        .middle {
+	            background-color: #efefef;
+	            padding: 40px 0 40px 0;
+	        }
+
+	        .bottom {
+	            background-color: white;
+	            padding: 40px 0 40px 0;
+	        }
+
+	        .bottom > .container {
+	            border: 1px solid #cccccc;
+	            padding: 20px 15px 20px 15px;
+	        }
+
+	        .bottom .media .media-body {
+	            padding: 15px 5px 15px 5px;
+	        }
+
+	        .news-title {
+	            border-bottom: 2px solid #f39f02;
+	            display: flex;
+	            align-items: flex-end;
+	            margin: 0 -5px 10px -5px;
+	        }
+	
+	        .news-title > .col-md-6 > a {
+	            font-size: 12px;
+	            text-decoration: none;
+	        }
+	
+	        .news-title > .col-md-6 > span {
+	            font-size: 16px;
+	        }
+	
+	        .news-item {
+	            margin: 5px 0 0 0;
+	        }
+
+	        .news-item > a {
+	            color: #757575;
+	            text-decoration: none;
+	        }
+
+	        .events-title {
+	            display: flex;
+	            align-items: flex-end;
+	            margin: 0 -15px 10px -15px;
+	        }
+	
+	        .events-title > .col-md-6 > a {
+	            font-size: 12px;
+	            text-decoration: none;
+	        }
+	
+	        .events-title > .col-md-6 > span {
+	            font-size: 16px;
+	        }
+
+	        .title-hr-line > .row > .col-md-2 + .col-md-2 {
+	            text-align: center;
+	            color: white;
+	            margin-left: 0;
+	        }
+	
+	        .title-hr-line hr {
+	            border-top: 2px solid white;
+	        }
+
+	        .home-project-block {
+	            padding-bottom: 30px;
+	        }
+	
+	        .home-project-block > .row > .col-md-3 {
+	            margin: 10px 0 10px 0;
+	        }
+
+	        .home-project-block > .row > .col-md-3 > a,
+	        .bottom > .container > .row > .col-md-4 > a {
+	            color: black;
+	            text-decoration: none;
+	        }
+
+	        .project-card:hover {
+	            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(255, 255, 255);
+	            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(255, 255, 255);
+	        }
+
+	        .event-card .media:hover {
+	            box-shadow: inset 0 1px 1px rgba(255, 255, 255, .075), 0 0 8px rgba(105, 105, 105, 0.6);
+	            -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, .075), 0 0 8px rgba(105, 105, 105, 0.6);
+	        }
+	
+	        .event-card .media-top > img {
+	            height: 180px;
+	            width: 359px;
+	        }
+
+	        .project-card > .thumbnail {
+	            margin-top: 5px;
+	            border: none;
+	            margin-bottom: 0;
+	        }
+	
+	        .project-card {
+	            margin: 0 -5px;
+	            padding: 10px;
+	            background-color: white;
+	            border: solid 1px #cccccc;
+	        }
+
+	        .project-card > .thumbnail > img {
+	            width: 243px;
+	            height: 158px;
+	        }
+	
+	        .project-card > .caption {
+	            padding: 4px;
+	        }
+
+	        .project-card > .caption > p {
+	            color: #565553;
+	            height: 60px;
+	            max-height: 60px;
+	            white-space: normal;
+	            margin-bottom: 5px;
+	            overflow: hidden;
+	        }
+
+	        .news-thumbnail {
+	            position: relative;
+	            overflow: hidden;
+	            padding: 0;
+	            border: none;
+	            margin: auto;
+	        }
+
+	        .img-container {
+	            text-align: center;
+	            display: inline-block;
+	        }
+	
+	        .img-container img {
+	            max-height: 100%;
+	            max-width: 100%;
+	            vertical-align: middle;
+	        }
+
+	        .caption-btm {
+	            background: rgba(0, 0, 0, .3);
+	            width: 100%;
+	            height: 60px;
+	            line-height: 25px;
+	            position: absolute;
+	            bottom: 0;
+	            color: #fff;
+	            text-align: left;
+	            padding: 4px 10px;
+	        }
+	
+	        .middle > .container > .row {
+	            display: flex;
+	        }
+	
+	        .middle > .container > .row > .col-md-7 > div {
+	            padding: 10px;
+	            background-color: white;
+	        }
+	
+	        .middle > .container > .row > .col-md-5 {
+	            padding: 10px;
+	            background-color: white;
+	        }
+
+	        .img-container {
+	            height: 100%;
+	            width: 100%;
+	        }
+	
+	        .img-container img {
+	            height: 100%;
+	            width: 100%;
+	        }
+
+	        .infor-item {
+	            overflow: hidden;
+	            white-space: nowrap;
+	            text-overflow: ellipsis;
+	        }
+
+	        .meeting-content {
+	            overflow: hidden;
+	            max-height: 60px;
+	            white-space: normal;
+	            word-break: break-all;
+	            text-overflow: ellipsis;
+	            display: -webkit-box;
+	            -webkit-box-orient: vertical;
+	            -webkit-line-clamp: 5;
+	        }
+		    a {
+		        text-decoration: none;
+		    }
+		    .top-background {
+		    	height: 450px;
+		    	background-size: cover;
+		    	
+		    }
+		    .modal-footer {
+		    padding: 15px;
+		    text-align: right;
+		    border-top: 0px solid #e5e5e5;
+			}
+		</style>
+	</head>
+	<body>
+	<nav class="navbar navbar-default " id="top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" id="logo" href="home.html"><img src="img/helezhisi.png"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li ><a href="home.html">首页<span
+                        class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="workshop_team.html">车间队伍</a></li>
+                <li class="active"><a href="research_project.html">研究项目</a>
+                </li>
+                <li class="active"><a href="innovation_product.html">创新成果</a></li>
+                <li class="active"><a href="skill_video.html">技术视频</a></li>
+                <li class="active"><a href="material_center.html">资料中心</a></li>
+                <li class="active"><a href="message_board.html">留言板</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="logout-dialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">{% trans 'Log out' %}</h4>
+            </div>
+            <div class="modal-body">
+                {% trans 'Are you sure you want to log out?' %}
+            </div>
+            <div class="modal-footer">
+                <a href="{% url 'logout' %}" role="button" class="btn btn-danger">{% trans 'Yes' %}</a>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">{% trans 'No' %}</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+  <div class="top">
+        <div class="up">
+            <div class="top-background">
+            	
+            </div>
+            <div class="container title-hr-line visible-md visible-lg">
+                <div class="row">
+                    <div class="col-md-2">
+                        <hr>
+                    </div>
+                    <div class="col-md-2"><h4>车间队伍</h4></div>
+                    <div class="col-md-8">
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <!--{% leader_carousel leader_list %}-->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="8000">
+    <div class="carousel-inner" role="listbox">
+        <!--{% for leaders in leader_list %}-->
+            <div class="item active">
+                <div class="container">
+                    <div class="row">
+                        <!--{% for leader in leaders %}-->
+                            <div class="col-md-2">
+                                <a href="workshop_team.html">
+                                    <div class="leader-card">
+                                        <div class="thumbnail">
+                                            <img src="img/wangwenfei.png">
+                                        </div>
+                                        <div class="caption">
+                                            <h4>王文飞</h4>
+                                            <p>王文飞，男，中共党员，工程师，现任制丝车间带班长。长期工作在生产一线，具有较高的专业技术水平、组织协调和较强的
+                                            实际工作能力。十多项QC成果获得省优，三个六西格玛成果获得国优，申报多项实用型专利，参与的科技成果多项获得省科技鉴定等等。2016年荣获公司“青
+                                            年标兵”和优秀共产党员，曾荣获“河南省文明职工”、“安阳市百佳班组长”、“安阳市新长征突击手”、“质量标兵”、“首席操作工”等荣誉称号，带领班组荣获
+                      “安阳市百佳班组”和“安阳市工人先锋号”。</p>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="workshop_team.html">
+                                    <div class="leader-card">
+                                        <div class="thumbnail">
+                                            <img src="img/wangguodong.png">
+                                        </div>
+                                        <div class="caption">
+                                            <h4>王国东</h4>
+
+                                            <p>王国东，男，汉族，1971年6月出生，1991年6月参加工作，1998年6月入党，中技学历，现岗位为制丝车间乙班带班长，曾任制丝车间党总支-支部书记。
+                                            参加工作二十年来，在制丝车间切丝种连续九年获得技术比武第一名，在全省切丝技术比武获得了第二、第三名的成绩，曾荣获全国、省、市“五一”劳动奖章，省、市、厂技术能手，
+                                            安阳市百名一线技术精英，公司标兵，优秀党员等荣誉七十多项。在2008年成为奥运火炬手，当选为安阳市第九届党代会代表。</p>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                             <div class="col-md-2">
+                                <a href="workshop_team.html">
+                                    <div class="leader-card">
+                                        <div class="thumbnail">
+                                            <img src="img/zhengsuyong.png">
+                                        </div>
+                                        <div class="caption">
+                                            <h4>郑苏勇</h4>
+
+                                            <p>郑苏勇，男，45岁。制丝车间设备维修保障二班班长。自1991年参加工作以来，郑苏勇秉承执着、忠诚、实干、奉献的精神，在车间设备维修这个平凡的岗位上默默地奉献自己的青春。沉默寡言是他
+                                            	固有的性格特征，凡事亲历亲为是他的干事标签。8小时以内金叶制造，8小时外千日营销，不论是车间设备检修，还是市场产品宣传，他没有过一次缺席。曾荣获省烟草系统设备维修能手、市青年突
+                                            	击手、公司优秀党员。在他的带领下，安阳卷烟厂制丝车间维修保障二班2016年被评为“省级劳模工作室”。团队近年来累计为车间节约成本超三百万元。被评为厂2014年度、2015年度优秀共产党员。</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                             <div class="col-md-2">
+                                <a href="workshop_team.html">
+                                    <div class="leader-card">
+                                        <div class="thumbnail">
+                                            <img src="img/changhuibin.png">
+                                        </div>
+                                        <div class="caption">
+                                            <h4>常会彬</h4>
+                                            <p>常会彬，制丝车间工艺员，中共党员，工程师。长期从事工艺质量管理工作，具有较高的专业技能水平，积累了丰富的课题攻关经验。先后被评为安阳市技术英杰、安阳卷烟厂学习型员工、金叶
+                                            制造标兵和优秀共产党员等荣誉称号。在科技创新活动中，他主持和参与完成的QC成果，9项荣获国优，10余项获省优一等奖；6个西格玛项目荣获全国优秀奖；2项科技成果通过河南省科技厅鉴定，3项通过公司验收；1项技
+                                            术革新获公司二等奖；3项国家实用新型专利；先后在《价值工程》发表科技论文4篇。</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            
+                        <!--{% endfor %}-->
+                    </div>
+                </div>
+            </div>
+        <!--{% endfor %}-->
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+        </div>
+        <div class="down">
+            <div class="container title-hr-line visible-md visible-lg">
+                <div class="row">
+                    <div class="col-md-2">
+                        <hr>
+                    </div>
+                    <div class="col-md-2"><h4>研究项目</h4></div>
+                    <div class="col-md-8">
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="container home-project-block">
+                <div class="row">
+                    <!--{% for startup in startups %}-->
+                        <div class="col-md-3">
+                            <a href="project_detail.html">
+                                <div class="project-card">
+                                    <div href="#" class="thumbnail">
+                                        <img src="img/events_1.png" alt="Generic placeholder thumbnail">
+                                    </div>
+                                    <div class="caption">
+                                        <h4>公司导入企业卓越管理模式引领体制改革</h4>
+
+                                        <p>XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。</p>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    <div class="col-md-3">
+                            <a href="project_detail.html">
+                                <div class="project-card">
+                                    <div href="#" class="thumbnail">
+                                        <img src="img/events_1.png" alt="Generic placeholder thumbnail">
+                                    </div>
+                                    <div class="caption">
+                                        <h4>减速机进口轴承支承结构形式应考虑的问题</h4>
+                                        <p>XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。</p>
+                                    
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    <div class="col-md-3">
+                            <a href="project_detail.html">
+                                <div class="project-card">
+                                    <div href="#" class="thumbnail">
+                                        <img src="img/events_1.png" alt="Generic placeholder thumbnail">
+                                    </div>
+                                    <div class="caption">
+                                        <h4>减速机进口轴承支承结构形式应考虑的问题</h4>
+                                        <p>XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。</p>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    <div class="col-md-3">
+                            <a href="project_detail.html">
+                                <div class="project-card">
+                                    <div href="#" class="thumbnail">
+                                        <img src="img/events_1.png" alt="Generic placeholder thumbnail">
+                                    </div>
+                                    <div class="caption">
+                                        <h4>减速机进口轴承支承结构形式应考虑的问题</h4>
+                                        <p>XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。</p>
+
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    <div class="col-md-3">
+                            <a href="project_detail.html">
+                                <div class="project-card">
+                                    <div href="#" class="thumbnail">
+                                        <img src="img/events_1.png" alt="Generic placeholder thumbnail">
+                                    </div>
+                                    <div class="caption">
+                                       <h4>减速机进口轴承支承结构形式应考虑的问题</h4>
+                                        <p>XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。</p>
+
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    <div class="col-md-3">
+                            <a href="project_detail.html">
+                                <div class="project-card">
+                                    <div href="#" class="thumbnail">
+                                        <img src="img/events_1.png" alt="Generic placeholder thumbnail">
+                                    </div>
+                                    <div class="caption">
+                                         <h4>减速机进口轴承支承结构形式应考虑的问题</h4>
+                                        <p>XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。</p>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                   <div class="col-md-3">
+                            <a href="project_detail.html">
+                                <div class="project-card">
+                                    <div href="#" class="thumbnail">
+                                        <img src="img/events_1.png" alt="Generic placeholder thumbnail">
+                                    </div>
+                                    <div class="caption">
+                                         <h4>减速机进口轴承支承结构形式应考虑的问题</h4>
+                                        <p>XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。</p>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+					<div class="col-md-3">
+                            <a href="project_detail.html">
+                                <div class="project-card">
+                                    <div href="#" class="thumbnail">
+                                        <img src="img/events_1.png" alt="Generic placeholder thumbnail">
+                                    </div>
+                                    <div class="caption">
+                                         <h4>减速机进口轴承支承结构形式应考虑的问题</h4>
+                                        <p>XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。我们坚决不做“装配工厂”而大力投资配备现代化加工设备及先进的检测仪器，实行整机自行生XXX有限公司成立于2008年，公司总部位于中国广州市，一直坚持“科技创新、质量第一”的管理信念，在国内外打下坚实的基础，成为中国知名专业品牌。</p>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+<!--{% endfor %}-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <!--{% if first_news %}-->
+                        <div>
+                            <a href="innovation_detail_zhijia.html">
+                                <div class="thumbnail news-thumbnail">
+                                    <div class="caption-btm" id="uploadPhoto">
+                                    该砂轮磨头支架具有稳固、耐用、寿命长的特点，同时能够很好的与各种磨头兼容，具有其他类型的支架无法比拟的特点。</div>
+                                            <div class="img-container"><img id="photo" src="img/motouzhijia.jpg"></div>
+                                </div>
+                            </a>
+                        </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="row news-title">
+                        <div class="col-md-6"><span><b>创新成果</b></span></div>
+                        <div class="col-md-6"><a href="innovation_product.html" class="pull-right"><span>更多</span></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                                <div class="col-md-12 news-item row">
+                                    <a href="innovation_detail.html">
+                                        <div class="col-md-9 infor-item">
+                                            薄板烘丝机旋转接头
+                                        </div>
+
+                                        <div class="col-md-3 infor-item">
+                                            <span class="pull-right">2016-6-27</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                 <div class="col-md-12 news-item row">
+                                    <a href="innovation_detail.html">
+                                        <div class="col-md-9 infor-item">
+                                            砂轮磨头支架
+                                        </div>
+
+                                        <div class="col-md-3 infor-item">
+                                            <span class="pull-right">2016-7-2</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                 <div class="col-md-12 news-item row">
+                                    <a href="innovation_detail.html">
+                                        <div class="col-md-9 infor-item">
+                                   		  二元喷嘴      
+                                        </div>
+
+                                        <div class="col-md-3 infor-item">
+                                            <span class="pull-right">2016-8-20</span>
+                                        </div>
+                                    </a>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+    	<div class="container">
+            <div class="row events-title">
+                <div class="col-md-6"><span><b>技术视频</b></span></div>
+                <div class="col-md-6"><a href="skill_video.html" class="pull-right"><span>更多</span></a></div>
+            </div>
+	    	<div class="row">
+		        <div class="col-md-4 event-card">
+	                <div class="media">
+	                    <div class="media-top">
+	                        <!--<img class="img-responsive" src="img/events_1.png">-->
+	                        	<video width="350" height="250" controls="controls">
+	                        		<source src="img/1.mp4" type="audio/mp4"></source>
+	                        	</video>
+	                    </div>
+	                    <div class="media-body content-style">
+	                        <h4 class="event-title">薄板烘丝机旋转接头使用教程</h4>
+	                        <span>地点:河南安阳卷烟厂</span><br>
+	                        <span>时间：四月 13，2017，8：30am</span><br>
+	                        <span class="meeting-content">介绍:踢足球, 打麻酱</span>
+	                    </div>
+	                </div>
+	        	</div>
+	        	<div class="col-md-4 event-card">
+	                <div class="media">
+	                    <div class="media-top">
+	                        <!--<img class="img-responsive" src="img/events_1.png">-->
+	                        	<video width="350" height="250" controls="controls">
+	                        		<source src="img/1.mp4" type="audio/mp4"></source>
+	                        	</video>
+	                    </div>
+	                    <div class="media-body content-style">
+	                        <h4 class="event-title">砂轮磨头支架使用教程</h4>
+	                        <span>地点:河南安阳卷烟厂</span><br>
+	                        <span>时间：四月 13，2017，8：30am</span><br>
+	                        <span class="meeting-content">介绍:踢足球, 打麻酱</span>
+	                    </div>
+	                </div>
+	        	</div>
+	        	<div class="col-md-4 event-card">
+	                <div class="media">
+	                    <div class="media-top">
+	                        <!--<img class="img-responsive" src="img/events_1.png">-->
+	                        	<video width="350" height="250" controls="controls">
+	                        		<source src="img/1.mp4" type="audio/mp4"></source>
+	                        	</video>
+	                    </div>
+	                    <div class="media-body content-style">
+	                        <h4 class="event-title">二元喷嘴使用教程</h4>
+	                        <span>地点:河南安阳卷烟厂</span><br>
+	                        <span>时间：四月 13，2017，8：30am</span><br>
+	                        <span class="meeting-content">介绍:踢足球, 打麻酱</span>
+	                    </div>
+	                </div>
+	        	</div>
+    		</div>
+        </div>
+    </div>
+    
+    
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style="padding-bottom: 5px;">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					登录
+				</h4>
+			</div>
+			<form class="form-group">
+			<div class="modal-body">
+				<div class="col-md-10 col-md-offset-1 input-group" style="padding-bottom: 15px; padding-top: 20px;">
+					<div class="col-md-2" style="padding-right: 0px;">
+					<p style="padding-top: 8px;">用户名：</p>
+					</div>
+					<div class="col-md-9">
+					<input placeholder="请输入用户名" class="form-control"/>
+					</div>
+				</div>
+				<div class="col-md-10 col-md-offset-1 input-group" style="padding-bottom: 15px;">
+					<div class="col-md-2" style="padding-right: 0px;">
+					<p style="padding-top: 8px;">密&nbsp;&nbsp;&nbsp;&nbsp;码：</p>
+					</div>
+					<div class="col-md-9">
+					<input placeholder="请输入密码" class="form-control"/>
+					</div>
+				</div>
+				<div class="col-md-10 col-md-offset-1 input-group">
+						<div class="col-md-2" style="padding-right: 0px;">
+		            		<p>验证码：</p>
+		            	</div>
+		            	<div class="col-md-10">
+		            		<input type="text" id="Txtidcode" hidden="hidden"/>
+		            		<span id="idcode"></span>
+		            	</div>
+				</div>
+			</div>
+			<div class="modal-footer" style="text-align: center;">
+				<button type="button" class="btn btn-primary">
+					登&nbsp;&nbsp;&nbsp;录
+				</button>
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
+<footer>
+    <div class="container">
+        <ul class="footer-links">
+            <li ><a href="about_us.html" class="foot-property">关于我们</a></li>
+            <li>|</li>
+            <li><a href="contact_us.html" class="foot-property">联系我们</a></li>
+            <!--<li>|</li>-->
+            <!--<li><a href="#" class="foot-property">获取帮助</a></li>-->
+        </ul>
+        <p class="foot-property">版权所有：安阳卷烟厂制丝部，未经许可，本网站包括图像、图标、文字在内的所有数据不得转载</p>
+    </div>
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as n
+eeded -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.backstretch.js"></script>
+<script>
+    $(".top-background").backstretch([
+    	"img/yellow_leaf.jpg",
+    	"img/gold_leaf.jpg"
+    ],{
+    	fade:750,
+    	duration:3000
+    });
+</script>
+	</body>
+</html>
+

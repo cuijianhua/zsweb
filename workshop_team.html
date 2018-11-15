@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>安阳卷烟厂制丝部</title>
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+    	<link href="css/site.css" rel="stylesheet">
+	    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <style>
+		    .foot-property{
+		        color: #fffffa;
+		    }
+		    .navbar-header{
+		        padding-right: 0px;
+		    }
+		    .navbar-default .navbar-nav > li > a {
+		        padding-left: 18px;
+		        padding-right: 18px;
+		    }
+		      body {
+            background-color: #f1f1f1;
+        	}
+
+	        .to-left {
+	            margin-left: 6px;
+	        }
+	
+	        .leader-carousel {
+	            background-color: #d5d5d5;
+	            padding: 50px 0 30px 0;
+	        }
+	
+	        #content > .container {
+	            background-color: white;
+	            padding-top: 30px;
+	            margin-top: 15px;
+	            margin-bottom: 160px;
+	        }
+		</style>
+	</head>
+	<body>
+	<nav class="navbar navbar-default " id="top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" id="logo" href="home.html"><img src="img/helezhisi.png"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="home.html">首页<span
+                        class="sr-only">(current)</span></a></li>
+                <li ><a href="workshop_team.html">车间队伍</a></li>
+                <li class="active"><a href="research_project.html">研究项目</a></li>
+                <li class="active"><a href="innovation_product.html">创新成果</a></li>
+                <li class="active"><a href="skill_video.html">技术视频</a></li>
+                <li class="active"><a href="material_center.html">资料中心</a></li>
+                <li class="active"><a href="message_board.html">留言板</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="logout-dialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">{% trans 'Log out' %}</h4>
+            </div>
+            <div class="modal-body">
+                {% trans 'Are you sure you want to log out?' %}
+            </div>
+            <div class="modal-footer">
+                <a href="{% url 'logout' %}" role="button" class="btn btn-danger">{% trans 'Yes' %}</a>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">{% trans 'No' %}</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div>
+        		<img src="img/message_board_head.jpg" />
+</div>
+ <!--<div class="leader-carousel">{% leader_carousel leader_list %}</div>-->
+    <div class="container" style="background: white; margin-bottom: 150px;margin-top: 30px;">
+        <div class="row">
+        	<!--<div class="col-md-12" style="m"><p>车间队伍风采</p></div>-->
+            <div class="col-md-12">
+                <!--{% leader_follow leaders user user_is_startup %}-->
+				<table class="table table-lead-investor">
+				    <thead>
+				    <tr>
+				        <th class="col-md-1"></th>
+				        <th class="col-md-3"> 姓名</th>
+				        <th class="col-md-3"> 职务</th>
+				        <th class="col-md-5"> 个人介绍</th>
+				    </tr>
+				    </thead>
+				    <tbody>
+				        <tr>
+				            <td>
+				             <img class="img-size" src="img/wangwenfei.png">
+				            </td>
+				            <td> 王文飞</td>
+				            <td>
+				                制丝车间带班长
+				            </td>
+				            <td>王文飞，男，中共党员，工程师.长期工作在生产一线，具有较高的专业技术水平、组织协调和较强的
+                                            实际工作能力。十多项QC成果获得省优，三个六西格玛成果获得国优，申报多项实用型专利，参与的科技成果多项获得省科技鉴定等等。2016年荣获公司“青
+                                            年标兵”和优秀共产党员，曾荣获“河南省文明职工”、“安阳市百佳班组长”、“安阳市新长征突击手”、“质量标兵”、“首席操作工”等荣誉称号，带领班组荣获
+                      “安阳市百佳班组”和“安阳市工人先锋号”。</td>
+				         <tr>
+				            <td>
+				                <img class="img-size" src="img/wangguodong.png">
+				            </td>
+				            <td> 王国东</td>
+				            <td>
+				                制丝车间乙班带班长
+				            </td>
+				            <td>王国东，男，汉族，1971年6月出生，1991年6月参加工作，1998年6月入党，中技学历，现岗位为制丝车间乙班带班长，曾任制丝车间党总支-支部书记。
+                                            参加工作二十年来，在制丝车间切丝种连续九年获得技术比武第一名，在全省切丝技术比武获得了第二、第三名的成绩，曾荣获全国、省、市“五一”劳动奖章，省、市、厂技术能手，
+                                            安阳市百名一线技术精英，公司标兵，优秀党员等荣誉七十多项。在2008年成为奥运火炬手，当选为安阳市第九届党代会代表。</td>
+				        </tr>
+				         <tr>
+				            <td>
+				                <img class="img-size" src="img/zhengsuyong.png">
+				            </td>
+				            <td> 郑苏勇</td>
+				            <td>
+				                带班长
+				            </td>
+				            <td>郑苏勇，男，汉族，1971年6月出生，1991年6月参加工作，1998年6月入党，中技学历，现岗位为制丝车间乙班带班长，
+				            	曾任制丝车间党总支一支部书记。参加作二十六年来，在制丝车间切丝种连续九年取得技术比武第一名，在全省切丝技术
+				            	比武获得了苐二、三名的成绩，曾荣获全国、省、市“五一”劳动奖章，省、市、厂技术能手，安阳市百名一线技术精英，
+				            	公司标兵，优秀党员等荣誉七十多项。</td>
+				        </tr>
+				    </tbody>
+				</table>
+            </div>
+        </div>
+        <ul class="pagination pull-right">
+                    <li class="active"><a href="#">1</a></li>
+                    <li ><a href="#">2</a></li>
+                    <li ><a href="#">3</a></li>
+                    <li ><a href="#">4</a></li>
+        </ul>
+    </div>
+
+
+<footer>
+    <div class="container">
+        <ul class="footer-links">
+            <li ><a href="about_us.html" class="foot-property">关于我们</a></li>
+            <li>|</li>
+            <li><a href="contact_us.html" class="foot-property">联系我们</a></li>
+            <!--<li>|</li>-->
+            <!--<li><a href="#" class="foot-property">获取帮助</a></li>-->
+        </ul>
+        <p class="foot-property">版权所有：安阳卷烟厂制丝部，未经许可，本网站包括图像、图标、文字在内的所有数据不得转载</p>
+    </div>
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as n
+eeded -->
+<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
+
